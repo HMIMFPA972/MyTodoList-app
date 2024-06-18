@@ -12,7 +12,11 @@ class TodoController extends Controller
      */
     public function index()
     {
-        //
+        $tasks = Todo::all();
+        // dd($tasks);
+        return view('todo.accueil',compact('tasks'));
+        // return view('todo.accueil',['tasks'=>$tasks]);
+
     }
 
     /**
