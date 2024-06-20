@@ -2,21 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Todo;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class TodoController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $tasks = Todo::all();
-        // dd($tasks);
-        return view('product.index',compact('tasks'));
-        // return view('todo.accueil',['tasks'=>$tasks]);
-
+        //
     }
 
     /**
@@ -32,18 +28,13 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        $task = Todo::create([
-            'title' => $request->input('title'),
-            // 'description' => $request->input('description'),
-            // 'status' => $request->input('status'),
-        ]);
-        return redirect("/");
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Todo $todo)
+    public function show(Category $category)
     {
         //
     }
@@ -51,7 +42,7 @@ class TodoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Todo $todo)
+    public function edit(Category $category)
     {
         //
     }
@@ -59,7 +50,7 @@ class TodoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Todo $todo)
+    public function update(Request $request, Category $category)
     {
         //
     }
@@ -67,7 +58,7 @@ class TodoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Todo $todo)
+    public function destroy(Category $category)
     {
         //
     }
