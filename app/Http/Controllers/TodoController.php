@@ -32,7 +32,12 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $task = Todo::create([
+            'title' => $request->input('title'),
+            // 'description' => $request->input('description'),
+            // 'status' => $request->input('status'),
+        ]);
+        return redirect("/");
     }
 
     /**
